@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiadó ingatlan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="detailed-info.css">
+</head>
+<body>
+  <div class="flex-container">
+    <div style="flex: 0 0 38%"><h1><a href='index.html'>Pécsi Albérlet Kereső Egyetemisták Szolgálata</a></h1></div>
+    <div style="flex: 0 0 25%"><img src="képek/pakesz.jpg" width="100px" height="100px"></div>
+    <div style="flex: 0 0 25%"><h2>Üdvözlünk az oldalon!</h2></div>
+</div>
+
+<div class="detailed-description">
+    <img src="" id="image" alt="">
+    <h2 id="price"></h2>
+    <p id="location"></p>
+    <table>
+        <tr>
+            <td id="buildingType"></td>
+        </tr>
+        <tr>
+            <td id="deposit"></td>
+        </tr>
+        <tr>
+            <td id="utilityCost"></td>
+        </tr>
+        <tr>
+            <td id="heating"></td>
+        </tr>
+        <tr>
+            <td id="furnishing"></td>
+        </tr>
+        <tr>
+            <td id="rooms"></td>
+        </tr>
+        <tr>
+            <td id="floor"></td>
+        </tr>
+        <tr>
+            <td id="view"></td>
+        </tr>
+        <tr>
+            <td id="balconies"></td>
+        </tr>
+        <tr>
+            <td id="americankitchen"></td>
+        </tr>
+    </table>
+</div>
+
+<div id="detailed-info" class="container">
+  <div id="overlay">
+    <div id="large-image-container">
+        <img id="large-image" src="" alt="">
+        <button id="prevBtn"></button>
+        <button id="nextBtn"></button>
+    </div>
+    <button id="closeBtn">X</button>
+    </div>
+</div>
+<div class="card" id="listing-${listing.id}">
+  <!-- Kártya tartalma -->
+</div>
+
+<script src="lakasdata.js"></script>
+<script src="detailed-info.js"></script>
+
+<footer class="text-center" style="background-color: #696969">
+        <div class="container">
+            <section>
+                <div class="flex-container">
+                  <div style="flex: 0 0 24%">
+                    <h3 class="text-uppercase font-weight-bold">
+                      <a href="index.html" class="text-white">Kezdőoldal</a>
+                    </h3>
+                  </div>
+  
+                  <div style="flex: 0 0 24%">
+                    <h3 class="text-uppercase font-weight-bold">
+                      <a href="rolunk.html" class="text-white">Rólunk</a>
+                    </h3>
+                  </div>
+  
+                  <div style="flex: 0 0 24%">
+                    <h3 class="text-uppercase font-weight-bold">
+                      <a href="dijaink.html" class="text-white">Díjaink</a>
+                    </h3>
+                  </div>
+
+  
+                  <div style="flex: 0 0 24%">
+                    <h3 class="text-uppercase font-weight-bold">
+                      <a href="kapcsolat.html" class="text-white">Kapcsolat</a>
+                    </h3>
+                  </div>
+    
+                </div>
+            </section>
+          
+        <hr style="width:100%; text-align:left; margin-left:0">
+    
+            <section>
+            <p style="font-size: 16px; margin-left:10%; margin-right:10%; margin-top:3%">
+                Pécs városában kínálunk megfizethető, kényelmes és jól felszerelt albérleteket az egyetemisták számára. 
+                Szakértelmünkkel és tapasztalatunkkal segítjük az egyetemi évek egyik legfontosabb kihívásának, az otthon megtalálásának megkönnyítését. 
+                Rugalmas megoldásainkkal és személyre szabott szolgáltatásainkkal arra törekszünk, hogy minden diák számára ideális lakhatást biztosítsunk. 
+                Közösségi terekkel, valamint kényelmes szobákkal segítjük őket abban, hogy teljes mértékben kiélvezzék az egyetemi élet minden pillanatát városunkban.
+            </p>
+              </div>
+            </section>
+              <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                <p style="text-align: center">© 2024 Pécsi Albérlet Kereső Egyetemisták Szolgálata</p>
+              </div>
+</footer>
+</body>
+</html>

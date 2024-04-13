@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAKESZ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="detailed-description"></div>
+
+    <div class="flex-container">
+        <div style="flex: 0 0 35%"><h1><a href='home.html'>Pécsi Albérlet Kereső Egyetemisták Szolgálata</a></h1></div>
+        <div style="flex: 0 0 5%"><img src="képek/pakesz.jpg" width="100px" height="100px"></div>
+        <div style="flex: 0 0 25%"><h2>Üdvözlünk az oldalon!</h2></div>
+        <div style="flex: 0 0 5%"><button type="button" onclick="showAdPopup()">Hidetésfeladás</button></div>
+        <div style="flex: 0 0 5%"><button onclick="showLoginPopup()">Bejelentkezés</button></div>
+        <div style="flex: 0 0 5%"><button onclick="showRegistrationPopup()">Regisztráció</button></div>
+    </div>
+
+    <div class="modal" id="loginPopup">
+        <div class="modal-content">
+            <form id="loginForm">
+                <p>Bejelentkezés</p>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+                <label for="password">Jelszó:</label>
+                <input type="password" id="password" name="password">
+                <button type="button" onclick="login()">Bejelentkezés</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="registerPopup">
+        <div class="modal-content">
+            <form id="registerForm">
+                <p>Regisztráció</p>
+                <label for="name">Név:</label>
+                <input type="name" id="name" name="name">
+                <label for="newEmail">E-mail:</label>
+                <input type="email" id="newEmail" name="newEmail">
+                <label for="newPassword">Jelszó:</label>
+                <input type="password" id="newPassword" name="newPassword">
+                <label for="againPassword">Jelszó újra:</label>
+                <input type="password" id="againPassword" name="againPassword">
+                <button type="button" onclick="register()">Regisztráció</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="advertisementPopup">
+        <div class="modal-content">
+            <form id="advertisementForm">
+                <p>Hirdetésfeladás</p>
+                <label for="adType">Mit hidetnél?</label>
+                <select id="adType">
+                    <option value="lakas">Lakás</option>
+                    <option value="szoba">Szoba</option>
+                </select>
+                <label for="size">Méret:</label>
+                <input type="text" id="size" name="size" placeholder="m2">
+                <label for="rent">Bérleti díj:</label>
+                <input type="text" id="rent" name="rent" placeholder="Ft/hó">
+                <label for="name">Név:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+                <label for="phone">Telefon:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+36701234567">
+                <button type="button" onclick="submitAdvertisement()">Hirdetésfeladás</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="flex">
+        <div class="formBackground">
+            <form>
+                <div class="row">
+                    <label for="location">Helyszín</label>
+                    <input type="text" id="location" placeholder="Mire keresel?">
+                </div>
+                <div class="row">
+                    <label for="rent">Bérleti díj</label>
+                    <input type="number" id="min-rent" placeholder="Min" min="0">
+                    <span> - </span>
+                    <input type="number" id="max-rent" placeholder="Max" min="0">
+                </div>
+                <div class="row">
+                    <label for="rooms">Szoba</label>
+                    <input type="number" id="min-rooms" placeholder="Min" min="0">
+                    <span> - </span>
+                    <input type="number" id="max-rooms" placeholder="Max" min="0">
+                </div>
+                <div class="row">
+                    <label for="furnished">Berendezett</label>
+                    <select id="furnished">
+                        <option value="yes">Igen</option>
+                        <option value="no">Nem</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <button type="submit">Keresés</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+    <section id="search-results"></section>
+    <section id="featured-listings" class="listings-container"></section>
+    <div id="pagination">
+        <button id="prevPageBtn" type="submit">Előző</button>
+        <button id="Page1Btn" type="submit">1</button>
+        <button id="Page2Btn" type="submit">2</button>
+        <button id="Page3Btn" type="submit">3</button>
+        <button id="nextPageBtn" type="submit">Következő</button>
+    </div>
+
+<script src="script.js"></script>
+<script src="lakasdata.js"></script>
+
+<footer class="text-center" style="background-color: #696969">
+    <div class="container">
+        <section>
+            <div class="flex-container">
+                <div style="flex: 0 0 24%">
+                    <h3 class="text-uppercase font-weight-bold">
+                      <a href="index.html" class="text-white">Kezdőoldal</a>
+                    </h3>
+                  </div>
+  
+                  <div style="flex: 0 0 24%">
+                    <h3 class="text-uppercase font-weight-bold">
+                      <a href="rolunk.html" class="text-white">Rólunk</a>
+                    </h3>
+                  </div>
+  
+                  <div style="flex: 0 0 24%">
+                    <h3 class="text-uppercase font-weight-bold">
+                      <a href="nevezetessegek.html" class="text-white">Nevezetességek</a>
+                    </h3>
+                  </div>
+
+  
+                  <div style="flex: 0 0 24%">
+                    <h3 class="text-uppercase font-weight-bold">
+                      <a href="kapcsolat.html" class="text-white">Kapcsolat</a>
+                    </h3>
+                  </div>
+
+            </div>
+        </section>
+      
+    <hr style="width:100%; text-align:left; margin-left:0">
+
+        <section>
+        <p style="font-size: 16px; color: rgb(223, 222, 222); margin-left:10%; margin-right:10%; margin-top:3%">
+            Pécs városában kínálunk megfizethető, kényelmes és jól felszerelt albérleteket az egyetemisták számára. 
+            Szakértelmünkkel és tapasztalatunkkal segítjük az egyetemi évek egyik legfontosabb kihívásának, az otthon megtalálásának megkönnyítését. 
+            Rugalmas megoldásainkkal és személyre szabott szolgáltatásainkkal arra törekszünk, hogy minden diák számára ideális lakhatást biztosítsunk. 
+            Közösségi terekkel, valamint kényelmes szobákkal segítjük őket abban, hogy teljes mértékben kiélvezzék az egyetemi élet minden pillanatát városunkban.
+        </p>
+          </div>
+        </section>
+          <div class="text-center p-3" style="background-color: rgba(62, 62, 62, 0.2)">
+            <p style="text-align: center">© 2024 Pécsi Albérlet Kereső Egyetemisták Szolgálata</p>
+          </div>
+</footer>
+</body>
+</html>
