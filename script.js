@@ -58,15 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         });
         featuredListingsSection.innerHTML = html;
-        /*addCardClickEvent(); // Kattintás eseménykezelő hozzáadása az új kártyákhoz*/
     }
 });
-
-/*document.addEventListener('DOMContentLoaded', () => {
-    const queryParams = new URLSearchParams(window.location.search);
-    const listing = Object.fromEntries(queryParams.entries());
-    showDetailedInfo(listing);
-});*/
 
 function closeModal() {
     const modal = document.querySelector('.modal');
@@ -156,7 +149,6 @@ function openDetailedInfoPage(event, index) {
     window.open('detailed-info.html?id=' + index, '_blank');
 }
 
-// A JavaScript kódban
 document.addEventListener('DOMContentLoaded', function() {
     // Az összes kártya elem kiválasztása
     const cards = document.querySelectorAll('.card');

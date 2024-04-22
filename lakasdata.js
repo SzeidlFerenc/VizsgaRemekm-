@@ -14,7 +14,8 @@ const featuredListings = [
         floor: 1, 
         view: 'Panorámás', 
         balconies: 'Van', 
-        americankitchen: 'Van'
+        americankitchen: 'Van',
+        details: 'Kiadó lakás Pécs belvárosában, a Damjanich utcában. A lakás 3 szobával rendelkezik, első emeleten található, így könnyű hozzáférést biztosít. A lakás modern, panorámás kilátással rendelkezik, így kellemes és nyugodt környezetet biztosít a lakóknak. Az épületben központi fűtés van, így a hidegebb napokon is meleg marad a lakás. A lakás üres, de gépesített, így azonnal költözhető. Kaució 600.000 Ft, rezsiköltség pedig havi 70.000 Ft. Van erkély és amerikai konyha is, ami még kényelmesebbé teszi az otthoni életet. A lakás közelében találhatók különböző üzletek, éttermek és közlekedési lehetőségek, így minden könnyen elérhető a mindennapi élethez. Ha szeretnél otthonos, modern és praktikus lakást bérelni, ez a lakás ideális választás lehet számodra.'
     },
     { 
         id: 2, 
@@ -31,7 +32,8 @@ const featuredListings = [
         floor: 'Egyszintes', 
         view: 'Panorámás', 
         balconies: 'Van', 
-        americankitchen: 'Van'
+        americankitchen: 'Van',
+        details: 'Kiadó családi ház Pécs közkedvelt környékén, az Építők útján található. A ház 4 tágas szobával rendelkezik, és egy szinten helyezkedik el, így kényelmes otthont biztosít családoknak vagy nagyobb baráti társaságoknak. Az ingatlan panorámás kilátással rendelkezik, így élvezhető a természet közelsége és a város nyugodt hangulata. A házban hőszivattyú biztosítja a fűtést, ami környezetbarát és hatékony megoldást jelent a hidegebb napokra. A ház teljesen berendezett és gépesített, így azonnal beköltözhető. A kaució összege 900.000 Ft, míg a havi rezsiköltség 90.000 Ft. Az ingatlanban van erkély, valamint amerikai konyha is, ami még komfortosabbá teszi az otthoni életet.'
     },
     { 
         id: 3, 
@@ -47,7 +49,8 @@ const featuredListings = [
         floor: 7, 
         view: 'Utcai', 
         balconies: 'Nincs', 
-        americankitchen: 'Nincs' 
+        americankitchen: 'Nincs',
+        details: 'Kiadó lakás Pécs szívében, a Gadó utcában található. Az ingatlan ideális választás lehet egyetemisták vagy párok számára. A lakás 1,5 szobával rendelkezik, és a hetedik emeleten helyezkedik el, így gyönyörű kilátás nyílik a városra. Az épületben központi fűtés biztosítja a meleget, így a hidegebb napokon is kellemes környezet várja az ott lakókat. A lakás üres, de gépesített, így azonnal beköltözhető. A kaució összege 300.000 Ft, míg a havi rezsiköltség 50.000 Ft. Az ingatlanban nincs erkély, valamint amerikai konyha sem található, azonban a praktikus elrendezés és a jó közlekedési lehetőségek kárpótolhatnak ezért. Ha kényelmes és praktikus lakást keresel a városközpontban, akkor ez az ingatlan ideális választás lehet számodra.'
     },
     { 
         id: 4, 
@@ -64,7 +67,8 @@ const featuredListings = [
         floor: 'Kétszintes', 
         view: 'Panorámás', 
         balconies: 'Van', 
-        americankitchen: 'Van' 
+        americankitchen: 'Van',
+        details: 'Kiadó családi ház Pécsen, az Avar utcában. Az ingatlan ideális otthon lehet egy családnak vagy nagyobb csoportnak. A házban 3,5 szoba található, amelyek praktikusan vannak elrendezve, és lehetőséget biztosítanak a kényelmes együttlétre és a magánéletre egyaránt. A ház kétszintes, így elegendő helyet kínál a lakók számára. A kilátás panorámás, ami gyönyörű látványt nyújt a környező tájra. Az ingatlan teljesen berendezett, így azonnal beköltözhető. A kaució összege 1.200.000 Ft, a havi rezsiköltség pedig 100.000 Ft. Az ingatlanban van erkély és amerikai konyha is, amelyek még kényelmesebbé teszik az otthoni életet. Ha tágas, praktikus és jól felszerelt otthont keresel Pécsen, akkor ez a családi ház ideális választás lehet számodra.'
     },
     { 
         id: 5, 
@@ -80,7 +84,8 @@ const featuredListings = [
         floor: 'Kétszintes', 
         view: 'Panorámás', 
         balconies: 'Van', 
-        americankitchen: 'Nincs' 
+        americankitchen: 'Nincs',
+        details: 'Kiadó családi ház Pécsen, az Alsó utcában. Az ingatlan ideális választás lehet egy család vagy kisebb csoport számára. A házban 3 szoba található, amelyek tágasak és kényelmesek, és lehetőséget biztosítanak a lakók számára a nyugodt és otthonos életre. A ház kétszintes, így elegendő helyet kínál a lakók számára. A kilátás panorámás, ami gyönyörű látványt nyújt a környező tájra. Az ingatlan üres, de gépesített, így azonnal beköltözhető. A kaució összege 550.000 Ft, a havi rezsiköltség pedig 80.000 Ft. Az ingatlanban van erkély, ami még kellemesebbé teszi az otthoni életet. Ha tágas, panorámás és jól felszerelt otthont keresel Pécsen, akkor ez a családi ház lehet az ideális választás számodra.'
     },
     { 
         id: 6, 
@@ -98,7 +103,8 @@ const featuredListings = [
         floor: 9, 
         view: 'Utcai', 
         balconies: 'Nincs', 
-        americankitchen: 'Nincs' 
+        americankitchen: 'Nincs',
+        details: 'Kiadó lakás Pécsen, a Páfrány utcában. Az ingatlan ideális lehet egy párnak vagy egy kisebb családnak. A lakásban 2 szoba található, amelyek elég tágasak és kényelmesek a mindennapi élethez. A lakás kilátása az utcára nyílik, ami lehetővé teszi, hogy közel legyenek a város különböző pontjaihoz. Az ingatlan üresen kiadó, így lehetőséged van arra, hogy saját stílusodnak megfelelően rendezd be. A kaució összege 250.000 Ft, a havi rezsiköltség pedig 40.000 Ft. Ha kényelmes, jól megközelíthető lakást keresel Pécsen, akkor ez a lakás lehet az ideális választás számodra.'
     },
     { 
         id: 7, 
@@ -115,7 +121,8 @@ const featuredListings = [
         floor: 'Kétszintes', 
         view: 'Panorámás', 
         balconies: 'Van', 
-        americankitchen: 'Van' 
+        americankitchen: 'Van',
+        details: 'Pécs egyik legszebb részén, a Sas dűlőn található ez a családi ház, ami ideális otthon lehet egy nagyobb családnak vagy akár egy baráti társaságnak is. A ház tágas terei és modern berendezése kényelmes életet biztosít a lakóknak. A lakás berendezett és gépesített, így azonnal beköltözhető. A ház kétszintes, ami lehetővé teszi a privát és a közösségi terek elkülönítését. A nagy erkélyről gyönyörű panoráma nyílik a környező természetre és a városra. A kaució összege 1.500.000 Ft, a havi rezsiköltség pedig 120.000 Ft. Ha kényelmes, modern és impozáns otthont keresel Pécsen, ez a családi ház tökéletes választás lehet számodra.'
     },
     { 
         id: 8, 
@@ -132,7 +139,8 @@ const featuredListings = [
         floor: 3, 
         view:'Utcai, világos', 
         balconies: 'Van', 
-        americankitchen: 'Nincs' 
+        americankitchen: 'Nincs',
+        details: 'A Pécs belvárosában található Pacsirta utcában kínálunk egy modern stílusú, kényelmes lakást, ami ideális lehet egy párnak vagy egy kisebb családnak. A lakás világos és tágas, két szobával rendelkezik, így elegendő helyet biztosít a mindennapi tevékenységekhez és a pihenéshez egyaránt. A lakás berendezett és gépesített, így azonnal beköltözhető. Az ablakokon át pedig gyönyörű kilátás nyílik az utcára. A kaució összege 480.000 Ft, a havi rezsiköltség pedig 75.000 Ft. Ha modern és kényelmes lakást keresel Pécs belvárosában, ne hagyd ki ezt a lehetőséget!'
     },
     { 
         id: 9, 
@@ -149,7 +157,8 @@ const featuredListings = [
         floor: 'Egyszintes', 
         view:'Panorámás', 
         balconies: 'Van', 
-        americankitchen: 'Nincs' 
+        americankitchen: 'Nincs',
+        details: 'Kiadó családi ház Pécs gyönyörű Hordós dűlőjében. A tágas és modern otthon ideális választás lehet egy nagyobb családnak vagy akár egy baráti társaságnak is. A ház berendezett és gépesített, így azonnal beköltözhető. A panorámás kilátás pedig különleges atmoszférát kölcsönöz az otthonnak. A kaució összege 1.200.000 Ft, míg a havi rezsi költség 120.000 Ft. Ha egy csendes környezetben lévő, tágas családi házat keresel Pécsen, ez a hely tökéletes választás lehet számodra. Ne hagyd ki ezt a fantasztikus lehetőséget!'
     },
     { 
         id: 10, 
@@ -166,7 +175,8 @@ const featuredListings = [
         floor: 2, 
         view:'Utcai, panorámás', 
         balconies: 'Van', 
-        americankitchen: 'Nincs' 
+        americankitchen: 'Nincs',
+        details: 'Kiadó lakás Pécs központjában, a Jedlik Ányos utcában. A modern és berendezett otthon ideális lehet egy kisebb családnak vagy akár diákoknak is. A panorámás kilátás és az erkély különleges hangulatot kölcsönöz az otthonnak. A lakás közelében könnyen elérhetőek az üzletek, éttermek és közlekedési lehetőségek, így minden a kényelmed és kényelmed érdekében van. A kaució összege 400.000 Ft, míg a havi rezsi költség 80.000 Ft. Ha egy modern és központi helyen lévő lakást keresel Pécsen, ez az otthon tökéletes választás lehet számodra. Ne hagyd ki ezt a fantasztikus lehetőséget!'
     },
     { 
         id: 11, 
@@ -183,7 +193,8 @@ const featuredListings = [
         floor: 3, 
         view:'Utcai, panorámás', 
         balconies: 'Nincs', 
-        americankitchen: 'Nincs' 
+        americankitchen: 'Nincs',
+        details: 'Kiadó lakás Pécs belvárosában, a Magyar Lajos utcában. A harmadik emeleten található lakás modern és tágas, kiváló lehetőséget kínál egyedülállóknak vagy pároknak. A lakás üres, így lehetőség van arra, hogy saját stílusod szerint rendezd be. A panorámás kilátás és a központi elhelyezkedés garantálja, hogy minden a közeledben legyen, ami a kényelmedet szolgálja. A kaució összege 300.000 Ft, míg a havi rezsi költség 60.000 Ft. Ha egy praktikus és központi helyen lévő lakást keresel Pécsen, ne hagyd ki ezt a lehetőséget!'
     },
     { 
         id: 12, 
@@ -200,7 +211,8 @@ const featuredListings = [
         floor: 1, 
         view:'Panorámás', 
         balconies: 'Van', 
-        americankitchen: 'Van' 
+        americankitchen: 'Van',
+        details: 'Kiadó lakás Pécs belvárosában, a Baranya utcában. Az első emeleten található lakás modern berendezéssel és gépesítéssel rendelkezik, így azonnal beköltözhető. A panorámás kilátásnak köszönhetően gyönyörű kilátás nyílik a városra. A központi fűtés garantálja a meleget a hideg napokon. A lakás két szobával és egy amerikai konyhás nappalival rendelkezik, ami ideális lehet egy kisebb család vagy párok számára. A kaució összege 700.000 Ft, a havi rezsi költség pedig 110.000 Ft. Ha egy modern és kényelmes lakást keresel Pécs belvárosában, ez az ingatlan ideális választás lehet számodra!'
     },
     { 
         id: 13, 
@@ -217,7 +229,8 @@ const featuredListings = [
         floor: 4, 
         view:'Utcai, panorámás', 
         balconies: 'Nincs', 
-        americankitchen: 'Nincs' 
+        americankitchen: 'Nincs',
+        details: 'Kiadó lakás Pécs belvárosában, a Bánki Donát utcában. A negyedik emeleten található lakás részben berendezett, így azonnal beköltözhető. A panorámás kilátásnak köszönhetően csodálatos kilátás nyílik a környező területekre. A cirkó fűtés gondoskodik a kellemes hőmérsékletről a hideg napokon. Az ingatlan egy és fél szobával rendelkezik, ami ideális lehet egyedülállók vagy párok számára. A kaució összege 250.000 Ft, a havi rezsi költség pedig 63.000 Ft. Ha egy hangulatos és panorámás lakást keresel Pécs belvárosában, ez az ingatlan tökéletes választás lehet számodra!'
     },
     { 
         id: 14, 
@@ -234,7 +247,8 @@ const featuredListings = [
         floor: 8, 
         view:'Utcai, panorámás', 
         balconies: 'Nincs', 
-        americankitchen: 'Nincs' 
+        americankitchen: 'Nincs',
+        details: 'Kiadó lakás Pécsen, a Nagy Imre utcában. Az ingatlan nyolcadik emeleten található, így gyönyörű panorámás kilátás nyílik a környező területekre. A részben berendezett lakás egy szobával rendelkezik, ideális lehet egyedülállók vagy diákok számára. A cirkó fűtés biztosítja a kellemes hőmérsékletet a lakásban, még a hideg napokon is. A kaució összege 170.000 Ft, míg a havi rezsi költség 50.000 Ft. Ha egy praktikus és panorámás lakást keresel Pécs belvárosában, ez az ingatlan remek lehetőséget kínál számodra!'
     },
     { 
         id: 15, 
@@ -251,7 +265,8 @@ const featuredListings = [
         floor: 2, 
         view:'Utcai, panorámás', 
         balconies: 'Nincs', 
-        americankitchen: 'Nincs' 
+        americankitchen: 'Nincs',
+        details: 'Kiadó lakás Pécsen, a Tildy Zoltán utcában. Az ingatlan második emeleten található, és gyönyörű panorámás kilátást nyújt a környező területekre. A berendezett és gépesített lakás ideális választás lehet egyedülállók vagy diákok számára. A központi fűtés gondoskodik a megfelelő hőmérsékletről a lakásban, így a hideg napokon is kellemes környezetet biztosít. A kaució összege 170.000 Ft, míg a havi rezsi költség 50.000 Ft. Ha praktikus és panorámás lakást keresel Pécs belvárosában, ez az ingatlan ideális lehetőséget nyújthat számodra!'
     },
     { 
         id: 16, 
@@ -268,7 +283,8 @@ const featuredListings = [
         floor: 2, 
         view:'Utcai, panorámás', 
         balconies: 'Van', 
-        americankitchen: 'Van' 
+        americankitchen: 'Van',
+        details: 'Kiadó lakás Pécsen, az Árnyas utcában. Az ingatlan második emeleten található, és gyönyörű panorámás kilátást nyújt a környező területekre. A berendezett és gépesített lakás ideális választás lehet családok vagy diákok számára. A központi fűtés gondoskodik a megfelelő hőmérsékletről a lakásban, így a hideg napokon is kellemes környezetet biztosít. A kaució összege 450.000 Ft, míg a havi rezsi költség 90.000 Ft. Ha praktikus és panorámás lakást keresel Pécs belvárosában, ez az ingatlan ideális lehetőséget nyújthat számodra!'
     },
     { 
         id: 17, 
@@ -285,6 +301,7 @@ const featuredListings = [
         floor: 'Egyszintes', 
         view:'Kerte néző', 
         balconies: 'Van', 
-        americankitchen: 'Nincs' 
+        americankitchen: 'Nincs',
+        details: 'Kiadó családi ház Pécsen, a Benke dűlőn, amely ideális választás lehet családok vagy nagyobb baráti társaságok számára. Az egyszintes épület szép kertre néző, így nyugodt és idilli környezetet biztosít a lakóknak. A berendezett és gépesített házban négy tágas szoba található, amelyek kényelmes elhelyezést nyújtanak a lakók számára. A központi fűtés gondoskodik a megfelelő hőmérsékletről a lakóterületen, így a hidegebb napokon is kellemes környezetet biztosít. A kaució összege 600.000 Ft, míg a havi rezsi költség 120.000 Ft. Ha olyan otthont keresel Pécsen, ahol élvezheted a természet közelségét és a kert nyújtotta nyugalmat, akkor ez a családi ház tökéletes választás lehet számodra!'
     },
 ];

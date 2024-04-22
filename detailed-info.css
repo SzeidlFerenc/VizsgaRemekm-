@@ -82,8 +82,16 @@
 
 #listing-details td {
     text-align: left;
+    font-size: 18px;
 }
 
 #listing-details th {
     text-align: right;
+    font-size: 18px;
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto; /* középre igazítás */
+    font-size: 20px;
 }

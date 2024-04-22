@@ -66,6 +66,10 @@ document.addEventListener("DOMContentLoaded", function() {
                         </tr>
                     </table>
                 </div>
+                <div>
+                    <h2>Leírás</h2>
+                    <p>${selectedListing.details}</p>
+                </div>
             `;
             
             // Lapozó funkciók
