@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const listingsPerPage = 8; // Hirdetések száma oldalanként
     let currentPage = 1; // Aktuális oldal
 
+    // Kezdeti listák megjelenítése
     displayFeaturedListings();
 
     // Lapozó gombok eseménykezelői
@@ -43,13 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const listingsToShow = featuredListings.slice(startIndex, endIndex);
         let html = '';
         listingsToShow.forEach((listing, index) => {
-            // Csak az első képet jelenítsük meg
+            const displayedIndex = startIndex + index + 1; // Aktuális oldalon lévő hirdetések sorszáma
             const firstImageSrc = listing.images[0];
             html += `
-            <div class="card">
+            <div class="card" data-rent="${listing.price}" data-rooms="${listing.rooms}" data-furnished="${listing.furnished}">
                 <div class="listings">
-                    <div class="listing" onclick="showDetailedInfo(${index})">
-                        <img src="${firstImageSrc}" id="listing-${index}" alt="${listing.location}">
+                    <div class="listing" onclick="openDetailedInfoPage(${displayedIndex})">
+                        <img src="${firstImageSrc}" id="listing-${displayedIndex}" alt="${listing.location}">
                         <h2>${listing.price} Ft/hó</h2>
                         <p>${listing.location}</p>
                     </div>
@@ -60,6 +61,25 @@ document.addEventListener('DOMContentLoaded', () => {
         featuredListingsSection.innerHTML = html;
     }
 });
+
+function openDetailedInfoPage(index) {
+    // Ellenőrizd, hogy az index érvényes szám-e
+    if (!Number.isInteger(index) || index < 0 || index >= featuredListings.length) {
+        console.error("Nincs érvényes index.");
+        return;
+    }
+
+    // A részletek megjelenítése az adott index alapján
+    const listing = featuredListings[index];
+    console.log("Részletek megjelenítése az index alapján: " + index);
+    console.log("Ár: " + listing.price);
+    console.log("Szobák száma: " + listing.rooms);
+    console.log("Berendezett: " + (listing.furnished ? 'igen' : 'nem'));
+    console.log("Aktuális oldal: " + currentPage);
+
+    // Új lap megnyitása az URL átirányítással
+    window.open('detailed-info.html?id=' + index, '_blank');
+}
 
 function closeModal() {
     const modal = document.querySelector('.modal');
@@ -84,14 +104,25 @@ function login() {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
-    // Példa: egyszerű ellenőrzés
-    if (email === "valami@example.com" && password === "titkosjelszo") {
-        alert("Sikeres bejelentkezés!");
-        // Ide jöhet a további tevékenységek, például a felhasználó beléptetése
-    } else {
-        alert("Hibás e-mail cím vagy jelszó!");
-        // Ide jöhet a hibaüzenet megjelenítése vagy más kezelés
-    }
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "users.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                if (response.success) {
+                    alert("Sikeres bejelentkezés!");
+                } else {
+                    alert(response.message);
+                }
+            } else {
+                alert("Hiba történt a szerverrel való kommunikáció során.");
+            }
+        }
+    };
+    var data = "email=" + encodeURIComponent(email) + "&password=" + encodeURIComponent(password);
+    xhr.send(data);
 }
 
 function register() {
@@ -100,6 +131,27 @@ function register() {
 
     // Regisztrációs folyamat, pl. hitelesítés és felhasználó hozzáadása az adatbázishoz
     alert("Regisztráció sikeres! Most már be tudsz jelentkezni az új fiókkal.");
+}
+
+function submitAdvertisement() {
+    // Szükséges adatok összegyűjtése az űrlapból
+    var adType = document.getElementById("adType").value;
+    var size = document.getElementById("size").value;
+    var rent = document.getElementById("rent").value;
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+
+    // Ellenőrzés, hogy minden szükséges mező ki legyen töltve
+    if (adType.trim() === '' || size.trim() === '' || rent.trim() === '' || name.trim() === '' || email.trim() === '' || phone.trim() === '') {
+        alert("Minden mező kitöltése kötelező!");
+        return;
+    }
+
+    // Hirdetésfeladás folyamata, például AJAX kérést küldeni a szervernek
+
+    // Esetleges visszajelzés a felhasználónak
+    alert("Hirdetés feladva!");
 }
 
 // A bezárás gomb eseményfigyelője
@@ -122,43 +174,4 @@ document.addEventListener("click", function(event) {
             modal.style.display = "none";
         });
     }
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector('form');
-    
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Megállítjuk az űrlap alapértelmezett működését
-
-        // Adatok kiolvasása az űrlapról
-        const location = document.getElementById('location').value;
-        const minRent = document.getElementById('min-rent').value;
-        const maxRent = document.getElementById('max-rent').value;
-        const minRooms = document.getElementById('min-rooms').value;
-        const maxRooms = document.getElementById('max-rooms').value;
-        const furnished = document.getElementById('furnished').value;
-
-        // Keresési feltételek alkalmazása a kártyákra
-        displayFilteredCards(location, minRent, maxRent, minRooms, maxRooms, furnished);
-    });
-});
-
-// home.html
-function openDetailedInfoPage(event, index) {
-    event.stopPropagation();
-    window.open('detailed-info.html?id=' + index, '_blank');
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Az összes kártya elem kiválasztása
-    const cards = document.querySelectorAll('.card');
-
-    // Minden kártya elemhez eseménykezelő hozzáadása
-    cards.forEach(card => {
-        // Az eseménykezelő, ami átirányít a részletes információk oldalra az adott ingatlan azonosítójával
-        card.addEventListener('click', function(event) {
-            const listingId = parseInt(card.id.split('-')[1]); // Az ingatlan azonosítójának kiolvasása az id attribútumból
-            window.location.href = `detailed-info.html?id=${listingId}`; // Átirányítás a részletes információk oldalra az adott ingatlan azonosítójával
-        });
-    });
 });

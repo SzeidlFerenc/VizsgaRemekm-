@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PAKESZ</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="lakasdata.js"></script>
+    <script src="filter.js"></script>
 </head>
 <body>
     <div id="detailed-description"></div>
 
     <div class="flex-container">
-        <div style="flex: 0 0 35%"><h1><a href='home.html'>Pécsi Albérlet Kereső Egyetemisták Szolgálata</a></h1></div>
+        <div style="flex: 0 0 35%"><h1><a href='index.html'>Pécsi Albérlet Kereső Egyetemisták Szolgálata</a></h1></div>
         <div style="flex: 0 0 5%"><img src="képek/pakesz.jpg" width="100px" height="100px"></div>
         <div style="flex: 0 0 25%"><h2>Üdvözlünk az oldalon!</h2></div>
         <div style="flex: 0 0 5%"><button type="button" onclick="showAdPopup()">Hidetésfeladás</button></div>
@@ -37,7 +40,7 @@
             <form id="registerForm">
                 <p>Regisztráció</p>
                 <label for="name">Név:</label>
-                <input type="name" id="name" name="name">
+                <input type="text" id="name" name="name">
                 <label for="newEmail">E-mail:</label>
                 <input type="email" id="newEmail" name="newEmail">
                 <label for="newPassword">Jelszó:</label>
@@ -75,7 +78,7 @@
     
     <div class="flex">
         <div class="formBackground">
-            <form>
+            <form id="filterForm">
                 <div class="row">
                     <label for="location">Helyszín</label>
                     <input type="text" id="location" placeholder="Mire keresel?">
@@ -93,19 +96,11 @@
                     <input type="number" id="max-rooms" placeholder="Max" min="0">
                 </div>
                 <div class="row">
-                    <label for="furnished">Berendezett</label>
-                    <select id="furnished">
-                        <option value="yes">Igen</option>
-                        <option value="no">Nem</option>
-                    </select>
-                </div>
-                <div class="row">
                     <button type="submit">Keresés</button>
                 </div>
             </form>
         </div>
     </div>
-    
 
     <section id="search-results"></section>
     <section id="featured-listings" class="listings-container"></section>
@@ -116,9 +111,6 @@
         <button id="Page3Btn" type="submit">3</button>
         <button id="nextPageBtn" type="submit">Következő</button>
     </div>
-
-<script src="script.js"></script>
-<script src="lakasdata.js"></script>
 
 <footer class="text-center" style="background-color: #696969">
     <div class="container">
