@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if (selectedListing !== undefined) {
             const detailedInfoContainer = document.getElementById('detailed-info');
 
-            // Kép és lapozó megjelenítése
             detailedInfoContainer.innerHTML = `
                 <div id="image-container">
                     <img id="current-image" src="${selectedListing.images[0]}" alt="${selectedListing.location}" class="listing-image">
@@ -41,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             <th>${selectedListing.heating}</th>
                         </tr>
                         <tr>
-                            <td>Berendezés: </td>
+                            <td>Berendezett: </td>
                             <th>${selectedListing.furnishing}</th>
                         </tr>
                         <tr>
@@ -69,10 +68,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 <div>
                     <h2>Leírás</h2>
                     <p>${selectedListing.details}</p>
-                </div>
-            `;
-            
-            // Lapozó funkciók
+                </div>`;
+
             const prevButton = document.getElementById('prev-btn');
             const nextButton = document.getElementById('next-btn');
             const currentImage = document.getElementById('current-image');
@@ -95,6 +92,20 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             console.error('Nincs megfelelő adat az id alapján.');
         }
+    } else {
+        console.error('Nincs id a query paraméterben, vagy az nem érvényes szám.');
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Új URLSearchParams objektum létrehozása az aktuális URL paramétereinek lekérdezéséhez
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // Az "id" paraméter kiolvasása az URL-ből és konvertálása számmá
+    const id = parseInt(urlParams.get('id'));
+
+    if (!isNaN(id)) {
+        // itt válaszd ki és jelenítsd meg a részletes információkat az adott azonosító alapján
     } else {
         console.error('Nincs id a query paraméterben, vagy az nem érvényes szám.');
     }
