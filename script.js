@@ -104,33 +104,46 @@ function login() {
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "users.php", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-                var response = JSON.parse(xhr.responseText);
-                if (response.success) {
-                    alert("Sikeres bejelentkezés!");
-                } else {
-                    alert(response.message);
-                }
-            } else {
-                alert("Hiba történt a szerverrel való kommunikáció során.");
-            }
-        }
-    };
-    var data = "email=" + encodeURIComponent(email) + "&password=" + encodeURIComponent(password);
-    xhr.send(data);
+    if (email === "feri2727@gmail.com" && password === "123456") {
+        alert("Sikeres bejelentkezés!");
+    } else {
+        alert("Hibás email cím vagy jelszó!");
+    }
 }
 
 function register() {
+    var name = document.getElementById("newName").value;
     var email = document.getElementById("newEmail").value;
     var password = document.getElementById("newPassword").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
 
-    // Regisztrációs folyamat, pl. hitelesítés és felhasználó hozzáadása az adatbázishoz
-    alert("Regisztráció sikeres! Most már be tudsz jelentkezni az új fiókkal.");
+    // Ellenőrzés, hogy minden mező ki legyen töltve
+    if (name.trim() === '' || email.trim() === '' || password.trim() === '' || confirmPassword.trim() === '') {
+        alert("Minden mező kitöltése kötelező!");
+        return;
+    }
+
+    // Ellenőrzés, hogy az email cím megfelelő formátumú-e
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Helytelen formátumú email cím!");
+        return;
+    }
+
+    // Ellenőrzés, hogy a jelszavak egyeznek-e
+    if (password !== confirmPassword) {
+        alert("Nem egyező jelszavak!");
+        return;
+    }
+
+    // Ellenőrzés, hogy a felhasználó már regisztrálva van-e
+    if (email === "feri2727@gmail.com") {
+        alert("Ez a felhasználó már regisztrálva van, jelentkezzen be vele!");
+        return;
+    }
+
+    // Ha minden ellenőrzés sikeres, akkor sikeres regisztráció üzenet
+    alert("Sikeres regisztráció!");
 }
 
 function submitAdvertisement() {
@@ -139,16 +152,21 @@ function submitAdvertisement() {
     var size = document.getElementById("size").value;
     var rent = document.getElementById("rent").value;
     var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
+    var email = document.getElementById("adEmail").value;
     var phone = document.getElementById("phone").value;
 
     // Ellenőrzés, hogy minden szükséges mező ki legyen töltve
-    if (adType.trim() === '' || size.trim() === '' || rent.trim() === '' || name.trim() === '' || email.trim() === '' || phone.trim() === '') {
+    if (size.trim() === '' || rent.trim() === '' || name.trim() === '' || email.trim() === '' || phone.trim() === '') {
         alert("Minden mező kitöltése kötelező!");
         return;
     }
 
-    // Hirdetésfeladás folyamata, például AJAX kérést küldeni a szervernek
+    // Ellenőrzés, hogy az email cím megfelelő formátumú-e
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        alert("Hibás email cím formátum!");
+        return;
+    }
 
     // Esetleges visszajelzés a felhasználónak
     alert("Hirdetés feladva!");
