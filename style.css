@@ -280,6 +280,10 @@ h2{
     .card{
         width: 50%;
     }
+    .modal-content {
+        width: 90%; /* 90%-os szélesség beállítása mobil eszközökön */
+        max-width: 100%; /* Maximális szélesség beállítása mobil eszközökön */
+    }
     .formBackground {
         width: auto; /* Automatikus szélesség beállítása */
         margin: 0 auto; /* Középre igazítás */
@@ -309,8 +313,29 @@ h2{
     .card{
         width: 100%;
     }
+    .modal-content {
+        width: 90%; /* 90%-os szélesség beállítása mobil eszközökön */
+        max-width: 100%; /* Maximális szélesség beállítása mobil eszközökön */
+    }
     .formBackground {
-        width: 90%;
+        width: auto; /* Automatikus szélesség beállítása */
+        margin: 0 auto; /* Középre igazítás */
+        padding: 10px; /* Kisebb padding a form körül */
+        display: flex; /* Flexbox elrendezés használata */
+        flex-direction: column; /* Oszlopba rendezés */
+    }
+    .row {
+        width: 100%; /* Teljes szélesség beállítása */
+        margin-bottom: 5px; /* Kisebb távolság az elemek között */
+    }
+    .row label {
+        margin-right: 0; /* Az elemek közötti távolság nullázása */
+        margin-bottom: 5px; /* Kisebb távolság a címkék és az input mezők között */
+    }
+    .row input,
+    .row select {
+        width: calc(100% - 20px); /* Az input mezők teljes szélesség beállítása a margin figyelembevételével */
+        margin-right: 0; /* Az elemek közötti távolság nullázása */
     }
     .flex-container{
         flex-direction: column;
