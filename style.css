@@ -284,6 +284,8 @@ h2{
         width: 70%;
         max-width: 90%; /* Maximális szélesség beállítása mobil eszközökön */
         margin: 0 auto; /* A tartalom középre igazítása */
+        padding: 0; /* Padding nullázása */
+
     }
     .modal-content input[type="text"],
     .modal-content input[type="email"],
@@ -326,6 +328,7 @@ h2{
         width: 70%;
         max-width: 90%; /* Maximális szélesség beállítása mobil eszközökön */
         margin: 0 auto; /* A tartalom középre igazítása */
+        padding: 0; /* Padding nullázása */
     }
     .modal-content input[type="text"],
     .modal-content input[type="email"],
