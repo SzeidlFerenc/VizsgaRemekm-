@@ -283,6 +283,7 @@ h2{
     .modal-content {
         width: 90%; /* 90%-os szélesség beállítása mobil eszközökön */
         max-width: 100%; /* Maximális szélesség beállítása mobil eszközökön */
+        margin: 0 auto; /* A tartalom középre igazítása */
     }
     .formBackground {
         width: auto; /* Automatikus szélesség beállítása */
@@ -316,6 +317,7 @@ h2{
     .modal-content {
         width: 90%; /* 90%-os szélesség beállítása mobil eszközökön */
         max-width: 100%; /* Maximális szélesség beállítása mobil eszközökön */
+        margin: 0 auto; /* A tartalom középre igazítása */
     }
     .formBackground {
         width: auto; /* Automatikus szélesség beállítása */
