@@ -281,8 +281,8 @@ h2{
         width: 50%;
     }
     .modal-content {
-        width: 70%; /* 90%-os szélesség beállítása mobil eszközökön */
-        max-width: 100%; /* Maximális szélesség beállítása mobil eszközökön */
+        width: 70%;
+        max-width: 90%; /* Maximális szélesség beállítása mobil eszközökön */
         margin: 0 auto; /* A tartalom középre igazítása */
     }
     .modal-content input[type="text"],
@@ -290,8 +290,8 @@ h2{
     .modal-content input[type="tel"],
     .modal-content input[type="password"],
     .modal-content select {
-        width: 90%; /* Input mezők szélességének beállítása 90%-ra */
-        max-width: 100%; /* Maximális szélesség beállítása */
+        width: calc(90% - 20px);
+        max-width: 90%; /* Maximális szélesség beállítása */
     }
     .formBackground {
         width: auto; /* Automatikus szélesség beállítása */
@@ -323,8 +323,8 @@ h2{
         width: 100%;
     }
     .modal-content {
-        width: 70%; /* 90%-os szélesség beállítása mobil eszközökön */
-        max-width: 100%; /* Maximális szélesség beállítása mobil eszközökön */
+        width: 70%;
+        max-width: 90%; /* Maximális szélesség beállítása mobil eszközökön */
         margin: 0 auto; /* A tartalom középre igazítása */
     }
     .modal-content input[type="text"],
@@ -332,8 +332,8 @@ h2{
     .modal-content input[type="tel"],
     .modal-content input[type="password"],
     .modal-content select {
-        width: 90%; /* Input mezők szélességének beállítása 90%-ra */
-        max-width: 100%; /* Maximális szélesség beállítása */
+        width: calc(90% - 20px);
+        max-width: 90%; /* Maximális szélesség beállítása */
     }
     .formBackground {
         width: auto; /* Automatikus szélesség beállítása */
