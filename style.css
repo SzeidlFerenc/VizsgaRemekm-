@@ -319,6 +319,10 @@ h2{
     .flex-container{
         flex-direction: column;
     }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 @media only screen and (max-width: 600px){
@@ -361,6 +365,10 @@ h2{
     }
     .flex-container{
         flex-direction: column;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
