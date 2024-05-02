@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         </tr>
                         <tr>
                             <td>Berendezett: </td>
-                            <th>${selectedListing.furnishing}</th>
+                            <th>${selectedListing.furnished}</th>
                         </tr>
                         <tr>
                             <td>Szobák száma: </td>
