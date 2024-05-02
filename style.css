@@ -285,6 +285,14 @@ h2{
         max-width: 100%; /* Maximális szélesség beállítása mobil eszközökön */
         margin: 0 auto; /* A tartalom középre igazítása */
     }
+    .modal-content input[type="text"],
+    .modal-content input[type="email"],
+    .modal-content input[type="tel"],
+    .modal-content input[type="password"],
+    .modal-content select {
+        width: 90%; /* Input mezők szélességének beállítása 90%-ra */
+        max-width: 100%; /* Maximális szélesség beállítása */
+    }
     .formBackground {
         width: auto; /* Automatikus szélesség beállítása */
         margin: 0 auto; /* Középre igazítás */
@@ -318,6 +326,14 @@ h2{
         width: 70%; /* 90%-os szélesség beállítása mobil eszközökön */
         max-width: 100%; /* Maximális szélesség beállítása mobil eszközökön */
         margin: 0 auto; /* A tartalom középre igazítása */
+    }
+    .modal-content input[type="text"],
+    .modal-content input[type="email"],
+    .modal-content input[type="tel"],
+    .modal-content input[type="password"],
+    .modal-content select {
+        width: 90%; /* Input mezők szélességének beállítása 90%-ra */
+        max-width: 100%; /* Maximális szélesség beállítása */
     }
     .formBackground {
         width: auto; /* Automatikus szélesség beállítása */
